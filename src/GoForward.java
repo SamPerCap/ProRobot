@@ -7,10 +7,10 @@ public class GoForward implements Behavior{
 	MovePilot pilot;
 	Boolean suppressed;
 	int speed = 100;
-	int acceleration = 50;
 	
 	public GoForward(MovePilot pilot) {
 		this.pilot = pilot;
+		pilot.setAngularAcceleration(ExplorerBrick.getAcc());
 		pilot.setAngularSpeed(speed);
 		pilot.setLinearSpeed(speed);
 	}
